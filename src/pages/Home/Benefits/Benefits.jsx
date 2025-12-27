@@ -52,7 +52,7 @@ const Benefits = () => {
 
                         {/* Text */}
                         <div className="w-full md:w-2/3 text-center md:text-left space-y-3">
-                            <h3 className="text-2xl font-extrabold text-[#303030]">
+                            <h3 className="text-2xl font-extrabold text-teal-800">
                                 {feature.title}
                             </h3>
                             <p className="text-gray-600 text-base leading-relaxed">

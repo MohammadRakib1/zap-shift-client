@@ -40,7 +40,7 @@ const TestimonialSection = () => {
         <section className="w-full lg:py-16 pb-4 text-center overflow-hidden">
             {/* Header */}
             <div className="max-w-3xl mx-auto px-4 mt-14">
-                <h2 className="text-2xl md:text-3xl font-extrabold text-[#303030] mb-2">
+                <h2 className="text-2xl md:text-3xl font-extrabold text-teal-800 mb-2">
                     What our customers are saying
                 </h2>
                 <p className="text-gray-500 text-sm md:text-base">
@@ -82,7 +82,7 @@ const TestimonialSection = () => {
                                     </p>
                                     <hr className="w-1/2 mx-auto mb-4 border-gray-300" />
                                     <div>
-                                        <p className="font-extrabold text-[#303030]">{item.name}</p>
+                                        <p className="font-extrabold text-teal-800">{item.name}</p>
                                         <p className="text-sm text-gray-500">{item.title}</p>
                                     </div>
                                 </motion.div>

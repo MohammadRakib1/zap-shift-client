@@ -17,7 +17,7 @@ const ServiceCard = ({ service }) => {
             </div>
 
             {/* Title */}
-            <h3 className="text-lg font-bold mb-2 text-[#303030]">{title}</h3>
+            <h3 className="text-lg font-bold mb-2 text-teal-800">{title}</h3>
 
             {/* Description */}
             <p className="text-sm text-gray-600">{description}</p>
