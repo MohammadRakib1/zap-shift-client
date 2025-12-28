@@ -2,6 +2,8 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { FcGoogle } from "react-icons/fc";
 import useAuth from "../../../firebase/hooks/useAuth";
+import { Link } from "react-router";
+import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Register = () => {
 
@@ -70,24 +72,22 @@ const Register = () => {
 
                 {/* Login link */}
                 <p className="text-center mt-5 text-gray-600 text-sm">
-                    Already have an account?{" "}
-                    <a href="#" className="text-blue-600 hover:underline font-medium">
-                        Login
-                    </a>
+                    Already have an account? <Link to='/login' className="text-blue-600 hover:underline font-medium">Login</Link>
                 </p>
 
                 {/* OR separator */}
-                <div className="flex items-center my-6">
+                {/* <div className="flex items-center my-6">
                     <div className="flex-grow h-px bg-gray-300"></div>
                     <span className="px-3 text-gray-500 text-sm">Or</span>
                     <div className="flex-grow h-px bg-gray-300"></div>
-                </div>
+                </div> */}
 
                 {/* Google signup */}
-                <button className="w-full border border-gray-300 flex items-center justify-center gap-2 p-3 rounded-xl hover:bg-gray-100 transition">
+                <SocialLogin></SocialLogin>
+                {/* <button className="w-full border border-gray-300 flex items-center justify-center gap-2 p-3 rounded-xl hover:bg-gray-100 transition">
                     <FcGoogle size={24} />
                     <span className="font-medium">Register with Google</span>
-                </button>
+                </button> */}
             </div>
         </div>
     );

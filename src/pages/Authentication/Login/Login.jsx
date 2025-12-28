@@ -1,5 +1,7 @@
 
 import { useForm } from 'react-hook-form';
+import { Link } from 'react-router';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Login = () => {
 
@@ -51,10 +53,12 @@ const Login = () => {
                         Login
                     </button>
                     <p className="text-center text-sm text-gray-500">
-                        Don’t have any account?{' '}
-                        <a href="#" className="text-green-600 hover:underline font-medium">Register</a>
+                        Don’t have any account? <Link to='/register' className="text-green-600 hover:underline font-medium">Register</Link>
                     </p>
-                    <div className="flex items-center justify-center gap-2 text-gray-500 py-2">
+
+                    <SocialLogin></SocialLogin>
+
+                    {/* <div className="flex items-center justify-center gap-2 text-gray-500 py-2">
                         <span className="w-full border-t"></span>
                         Or
                         <span className="w-full border-t"></span>
@@ -64,7 +68,7 @@ const Login = () => {
                         className="w-full flex items-center justify-center gap-2 border rounded-md py-2 hover:bg-gray-50"
                     >
                         Login with Google
-                    </button>
+                    </button> */}
                 </form>
             </div>
         </div>
