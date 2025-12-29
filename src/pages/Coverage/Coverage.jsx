@@ -1,6 +1,7 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import 'leaflet/dist/leaflet.css';
+import { useLoaderData } from "react-router";
 
 
 // Fix default marker icon issue
@@ -15,6 +16,10 @@ L.Icon.Default.mergeOptions({
 });
 
 const Coverage = () => {
+
+    const serviceCenters = useLoaderData();
+    console.log(serviceCenters);
+
     const bangladeshPosition = [23.685, 90.3563]; // Bangladesh center
 
     return (
@@ -48,11 +53,13 @@ const Coverage = () => {
                     />
 
                     {/* Marker */}
-                    <Marker position={bangladeshPosition}>
-                        <Popup>
-                            Bangladesh <br /> We deliver parcels nationwide.
-                        </Popup>
-                    </Marker>
+                    {
+                        serviceCenters.map((center, index) => <Marker key={index} position={[center.latitude, center.longitude]}>
+                            <Popup>
+                                <strong>{center.district}</strong> <br /> {center.covered_area.join(', ')}
+                            </Popup>
+                        </Marker>)
+                    }
                 </MapContainer>
             </div>
         </div>
