@@ -20,7 +20,7 @@ const Coverage = () => {
     const serviceCenters = useLoaderData();
     console.log(serviceCenters);
 
-    const bangladeshPosition = [23.685, 90.3563]; // Bangladesh center
+    const bangladeshPosition = [23.685, 90.3563];
 
     return (
         <div className="min-h-screen px-4 py-8 md:px-10">
